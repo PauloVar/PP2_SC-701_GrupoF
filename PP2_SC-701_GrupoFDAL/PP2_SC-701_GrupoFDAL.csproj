@@ -8,4 +8,9 @@
     <AssemblyName>PP2_SC-701_GrupoFDAL</AssemblyName>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Entidades\" />
+    <Folder Include="Repositorio\" />
+  </ItemGroup>
+
 </Project>

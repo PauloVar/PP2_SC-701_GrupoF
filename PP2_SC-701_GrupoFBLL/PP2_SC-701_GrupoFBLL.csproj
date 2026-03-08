@@ -17,4 +17,8 @@
     <ProjectReference Include="..\PP2_SC-701_GrupoFDAL\PP2_SC-701_GrupoFDAL.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Servicios\" />
+  </ItemGroup>
+
 </Project>
