@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PP1_SC-701_GrupoFBLL\PP2_SC-701_GrupoFBLL.csproj" />
+    <ProjectReference Include="..\PP2_SC-701_GrupoFBLL\PP2_SC-701_GrupoFBLL.csproj" />
     <ProjectReference Include="..\PP2_SC-701_GrupoFBLL\PP2_SC-701_GrupoFBLL.csproj" />
   </ItemGroup>
 

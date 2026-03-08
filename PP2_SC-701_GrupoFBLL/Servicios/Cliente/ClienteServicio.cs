@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using PP1_SC_701_GrupoFBLL.Dtos;
-using PP1_SC_701_GrupoFDAL.Repositorio.Cliente;
+using PP2_SC_701_GrupoFBLL.Dtos;
+using PP2_SC_701_GrupoFDAL.Repositorio.Cliente;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace PP1_SC_701_GrupoFBLL.Servicios.Cliente
+namespace PP2_SC_701_GrupoFBLL.Servicios.Cliente
 {
     public class ClienteServicio : IClienteServicio
     {
@@ -79,7 +79,7 @@ namespace PP1_SC_701_GrupoFBLL.Servicios.Cliente
                 return response;
             }
 
-            var entidad = _mapper.Map<PP1_SC_701_GrupoFDAL.Entidades.Cliente>(clienteDto);
+            var entidad = _mapper.Map<PP2_SC_701_GrupoFDAL.Entidades.Cliente>(clienteDto);
             _clienteRepositorio.AgregarCliente(entidad);
 
             response.mensaje = "Cliente agregado correctamente.";
@@ -121,7 +121,7 @@ namespace PP1_SC_701_GrupoFBLL.Servicios.Cliente
                 return response;
             }
 
-            var entidad = _mapper.Map<PP1_SC_701_GrupoFDAL.Entidades.Cliente>(clienteDto);
+            var entidad = _mapper.Map<PP2_SC_701_GrupoFDAL.Entidades.Cliente>(clienteDto);
             _clienteRepositorio.ActualizarCliente(entidad);
 
             response.mensaje = "Cliente actualizado correctamente.";
@@ -184,7 +184,7 @@ namespace PP1_SC_701_GrupoFBLL.Servicios.Cliente
                 return response;
             }
 
-            var telEntidad = _mapper.Map<PP1_SC_701_GrupoFDAL.Entidades.Telefono>(telefonoDto);
+            var telEntidad = _mapper.Map<PP2_SC_701_GrupoFDAL.Entidades.Telefono>(telefonoDto);
             _clienteRepositorio.AgregarTelefono(clienteId, telEntidad);
 
             response.mensaje = "Teléfono agregado correctamente.";

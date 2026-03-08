@@ -1,8 +1,8 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using PP1_SC_701_GrupoF.Models;
+using PP2_SC_701_GrupoF.Models;
 
-namespace PP1_SC_701_GrupoF.Controllers
+namespace PP2_SC_701_GrupoF.Controllers
 {
     public class HomeController : Controller
     {

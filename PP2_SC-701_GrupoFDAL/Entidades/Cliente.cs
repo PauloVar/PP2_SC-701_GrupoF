@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PP1_SC_701_GrupoFDAL.Entidades
+namespace PP2_SC_701_GrupoFDAL.Entidades
 {
     public class Cliente
     {

@@ -1,11 +1,11 @@
-﻿using PP1_SC_701_GrupoFBLL.Dtos;
+﻿using PP2_SC_701_GrupoFBLL.Dtos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PP1_SC_701_GrupoFBLL.Servicios.Cliente
+namespace PP2_SC_701_GrupoFBLL.Servicios.Cliente
 {
     public interface IClienteServicio
     {

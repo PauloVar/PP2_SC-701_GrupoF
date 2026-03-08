@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using PP1_SC_701_GrupoFBLL.Dtos;
-using PP1_SC_701_GrupoFBLL.Servicios.Cliente;
+using PP2_SC_701_GrupoFBLL.Dtos;
+using PP2_SC_701_GrupoFBLL.Servicios.Cliente;
 
-namespace PP1_SC_701_GrupoF.Controllers
+namespace PP2_SC_701_GrupoF.Controllers
 {
     public class ClienteController : Controller
     {

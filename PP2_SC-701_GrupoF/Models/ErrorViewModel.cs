@@ -1,4 +1,4 @@
-namespace PP1_SC_701_GrupoF.Models
+namespace PP2_SC_701_GrupoF.Models
 {
     public class ErrorViewModel
     {

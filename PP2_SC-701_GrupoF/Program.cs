@@ -1,6 +1,6 @@
-using PP1_SC_701_GrupoFBLL;
-using PP1_SC_701_GrupoFBLL.Servicios.Cliente;
-using PP1_SC_701_GrupoFDAL.Repositorio.Cliente;
+using PP2_SC_701_GrupoFBLL;
+using PP2_SC_701_GrupoFBLL.Servicios.Cliente;
+using PP2_SC_701_GrupoFDAL.Repositorio.Cliente;
 
 var builder = WebApplication.CreateBuilder(args);
 

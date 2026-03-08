@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PP1_SC-701_GrupoFDAL\PP2_SC-701_GrupoFDAL.csproj" />
+    <ProjectReference Include="..\PP2_SC-701_GrupoFDAL\PP2_SC-701_GrupoFDAL.csproj" />
     <ProjectReference Include="..\PP2_SC-701_GrupoFDAL\PP2_SC-701_GrupoFDAL.csproj" />
   </ItemGroup>
 

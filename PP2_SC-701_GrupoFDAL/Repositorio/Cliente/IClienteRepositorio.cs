@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PP1_SC_701_GrupoFDAL.Repositorio.Cliente
+namespace PP2_SC_701_GrupoFDAL.Repositorio.Cliente
 {
     public interface IClienteRepositorio
     {

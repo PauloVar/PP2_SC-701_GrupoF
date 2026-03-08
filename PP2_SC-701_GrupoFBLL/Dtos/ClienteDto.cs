@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PP1_SC_701_GrupoFBLL.Dtos
+namespace PP2_SC_701_GrupoFBLL.Dtos
 {
     public class ClienteDto
     {
