@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>PP2_SC_701_GrupoF</RootNamespace>
+    <AssemblyName>PP2_SC-701_GrupoF</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PP1_SC-701_GrupoFBLL\PP2_SC-701_GrupoFBLL.csproj" />
+  </ItemGroup>
+
+</Project>
