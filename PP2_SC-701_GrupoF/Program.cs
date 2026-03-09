@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using PP2_SC_701_GrupoFBLL;
 using PP2_SC_701_GrupoFDAL.Data;
 using PP2_SC_701_GrupoFDAL.Repositorios;
+using PP2_SC_701_GrupoFBLL.Servicios;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +15,9 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddAutoMapper(cfg => { }, typeof(MapeoClases));
 
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+
+builder.Services.AddScoped<ICategoriaServicio, CategoriaServicio>();
+builder.Services.AddScoped<IProductoServicio, ProductoServicio>();
 
 var app = builder.Build();
 
