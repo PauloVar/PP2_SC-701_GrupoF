@@ -16,14 +16,28 @@ namespace PP2_SC_701_GrupoF.Controllers
             _categoriaServicio = categoriaServicio;
         }
 
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+        public async Task<IActionResult> ObtenerProductos()
         {
             var productos = await _productoServicio.ObtenerTodos();
             var categorias = await _categoriaServicio.ObtenerTodos();
 
-            ViewBag.Categorias = categorias;
+            var data = productos.Select(p => new
+            {
+                id = p.Id,
+                nombre = p.Nombre,
+                descripcion = p.Descripcion,
+                precio = p.Precio,
+                stock = p.Stock,
+                categoriaId = p.CategoriaId,
+                categoriaNombre = categorias.FirstOrDefault(c => c.Id == p.CategoriaId)?.Nombre ?? ""
+            }).ToList();
 
-            return View(productos);
+            return Json(new { data });
         }
 
         public async Task<IActionResult> Create()
@@ -53,7 +67,7 @@ namespace PP2_SC_701_GrupoF.Controllers
                 return NotFound();
 
             var categorias = await _categoriaServicio.ObtenerTodos();
-            ViewBag.NombreCategoria = categorias.FirstOrDefault(x => x.Id == producto.CategoriaId)?.Nombre;
+            ViewBag.NombreCategoria = categorias.FirstOrDefault(x => x.Id == producto.CategoriaId)?.Nombre ?? "";
 
             return View(producto);
         }
@@ -89,7 +103,7 @@ namespace PP2_SC_701_GrupoF.Controllers
                 return NotFound();
 
             var categorias = await _categoriaServicio.ObtenerTodos();
-            ViewBag.NombreCategoria = categorias.FirstOrDefault(x => x.Id == producto.CategoriaId)?.Nombre;
+            ViewBag.NombreCategoria = categorias.FirstOrDefault(x => x.Id == producto.CategoriaId)?.Nombre ?? "";
 
             return View(producto);
         }

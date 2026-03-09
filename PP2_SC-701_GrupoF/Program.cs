@@ -29,7 +29,7 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-app.UseMiddleware<ExceptionMiddleware>();
+app.UseMiddleware<MiddlewareGlobalExceptionHandler>();
 
 app.UseHttpsRedirection();
 app.UseRouting();
@@ -37,6 +37,8 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapStaticAssets();
+
+app.UseMiddleware<MiddlewareGlobalExceptionHandler>();
 
 app.MapControllerRoute(
     name: "default",

@@ -13,10 +13,15 @@ namespace PP2_SC_701_GrupoF.Controllers
             _categoriaServicio = categoriaServicio;
         }
 
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+        public async Task<IActionResult> ObtenerCategorias()
         {
             var categorias = await _categoriaServicio.ObtenerTodos();
-            return View(categorias);
+            return Json(new { data = categorias });
         }
 
         public IActionResult Create()
@@ -38,6 +43,7 @@ namespace PP2_SC_701_GrupoF.Controllers
         public async Task<IActionResult> Details(int id)
         {
             var categoria = await _categoriaServicio.ObtenerPorId(id);
+
             if (categoria == null)
                 return NotFound();
 
@@ -47,6 +53,7 @@ namespace PP2_SC_701_GrupoF.Controllers
         public async Task<IActionResult> Edit(int id)
         {
             var categoria = await _categoriaServicio.ObtenerPorId(id);
+
             if (categoria == null)
                 return NotFound();
 
@@ -67,6 +74,7 @@ namespace PP2_SC_701_GrupoF.Controllers
         public async Task<IActionResult> Delete(int id)
         {
             var categoria = await _categoriaServicio.ObtenerPorId(id);
+
             if (categoria == null)
                 return NotFound();
 
