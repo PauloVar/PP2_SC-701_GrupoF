@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using PP2_SC_701_GrupoFBLL;
 using PP2_SC_701_GrupoFDAL.Data;
+using PP2_SC_701_GrupoFDAL.Repositorios;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +12,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddAutoMapper(cfg => { }, typeof(MapeoClases));
+
+builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 
 var app = builder.Build();
 
