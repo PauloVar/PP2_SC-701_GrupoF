@@ -1,17 +1,16 @@
+using Microsoft.EntityFrameworkCore;
 using PP2_SC_701_GrupoFBLL;
-using PP2_SC_701_GrupoFBLL.Servicios.Cliente;
-using PP2_SC_701_GrupoFDAL.Repositorio.Cliente;
+using PP2_SC_701_GrupoFDAL.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 builder.Services.AddAutoMapper(cfg => { }, typeof(MapeoClases));
-
-builder.Services.AddSingleton<IClienteRepositorio, ClienteRepositorio>();
-builder.Services.AddSingleton<IClienteServicio, ClienteServicio>();
-
 
 var app = builder.Build();
 

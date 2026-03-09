@@ -15,8 +15,8 @@ namespace PP2_SC_701_GrupoFBLL
     {
         public MapeoClases()
         {
-            CreateMap<Cliente, ClienteDto>().ReverseMap();
-            CreateMap<Telefono, TelefonoDto>().ReverseMap();
+            CreateMap<Categoria, CategoriaDto>().ReverseMap();
+            CreateMap<Producto, ProductoDto>().ReverseMap();
         }
     }
 }
