@@ -1,0 +1,25 @@
+﻿@model PP2_SC_701_GrupoFBLL.Dtos.CategoriaDto
+
+@{
+    ViewData["Title"] = "Eliminar Categoría";
+}
+
+<h1>Eliminar Categoría</h1>
+
+<div>
+    <h4>¿Está seguro de eliminar esta categoría?</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">Nombre</dt>
+        <dd class="col-sm-10">@Model.Nombre</dd>
+
+        <dt class="col-sm-2">Descripción</dt>
+        <dd class="col-sm-10">@Model.Descripcion</dd>
+    </dl>
+</div>
+
+<form asp-action="Delete" method="post">
+    <input asp-for="Id" type="hidden" />
+    <button type="submit" class="btn btn-danger">Eliminar</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>
